@@ -5,12 +5,9 @@
                                                                                                                                       
   ## Task                                                   
 
-  We use frozen patch-level embeddings from histology foundation models to predict RNA gene expression at each spatial spot on a      
+  I use frozen patch-level embeddings from foundation models to predict RNA gene expression at each spatial spot on a      
   tissue slide. For each spot, an image patch is extracted from the H&E whole slide image, encoded by a foundation model, and passed
   to a ridge regression probe that predicts the expression values of 50 highly variable genes.                                        
-                                                            
-  No fine-tuning is performed — the foundation models are used purely as feature extractors, making this a standard linear probing    
-  benchmark.
                                                                                                                                       
   ## Settings                                               
 
