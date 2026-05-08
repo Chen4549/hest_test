@@ -54,22 +54,18 @@ python implementations/benchmark.py \
   --bench_data_root /PATH/TO/DATA \
   --embed_dataroot /PATH/TO/EMBEDDINGS \
   --results_dir /PATH/TO/RESULTS
+  --weights /PATH/TO/WEIGHTS #if using DINO
 ```
 
-**Baseline Arguments:**
+### ⚙️ Baseline Arguments
 
 | Argument | Description |
 | :--- | :--- |
-| `--model_name` | Foundation model to use (`uni_v2`, `dinov3_vitl16`, `dinov3_vitb16`). |
-| `--bench_data_root` | Root directory containing the downloaded HEST-Bench datasets. |
-| `--embed_dataroot` | Directory where extracted patch embeddings will be saved. |
-| `--results_dir` | Directory where prediction results will be saved. |
-| `--weights` | *(DINOv3 only)* Path to the local DINOv3 pretrained weights file. |
-| `--batch_size` | Batch size for embedding extraction (default: `128`). |
-| `--num_workers` | Number of dataloader workers (default: `1`). |
-| `--dimreduce` | Dimensionality reduction before regression: `PCA` or `None` (default: `PCA`). |
-| `--latent_dim` | PCA output dimension (default: `256`). |
-| `--seed` | Random seed for reproducibility (default: `1`). |
+| **`--model_name`** | Foundation model to use (`uni_v2`, `dinov3_vitl16`, `dinov3_vitb16`). |
+| **`--bench_data_root`** | Root directory containing the downloaded HEST-Bench datasets. |
+| **`--embed_dataroot`** | Directory where extracted patch embeddings will be saved. |
+| **`--results_dir`** | Directory where prediction results will be saved. |
+| **`--weights`** | Path to the local DINOv3 pretrained weights file. *(DINOv3 only)* |
 
 *Example using DINOv3:*
 ```bash
