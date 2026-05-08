@@ -7,7 +7,7 @@ This repository implements spatial transcriptomics gene expression prediction fr
 The core objective is to predict RNA gene expression at specific spatial spots on a tissue slide using frozen patch-level embeddings from foundation models. 
 
 **Pipeline:**
-1. Extract an image patch from the H&E WSI for each spatial spot.
+1. Extract an image patch from the H&E for each spatial spot.
 2. Encode the patch using a pre-trained foundation model.
 3. Pass the resulting embeddings into a ridge regression probe.
 4. Predict the expression values of 50 highly variable genes.
@@ -46,7 +46,7 @@ pip install \
 
 ## Usage & Script Launching
 
-### 1. Foundation Models (Baseline)
+### 1. Foundation Models (UNI_v2)
 
 ```bash
 python implementations/benchmark.py \
@@ -54,7 +54,6 @@ python implementations/benchmark.py \
   --bench_data_root /PATH/TO/DATA \
   --embed_dataroot /PATH/TO/EMBEDDINGS \
   --results_dir /PATH/TO/RESULTS
-  --weights /PATH/TO/WEIGHTS #if using DINO
 ```
 
 ### ⚙️ Baseline Arguments
@@ -78,6 +77,10 @@ python implementations/benchmark.py \
 ```
 
 ### 2. Foundation Models + Spatial Neighbor Aggregation
+
+Gene expression at a spatial spot is not determined solely by the cells directly beneath it — the surrounding tissue microenvironment plays a significant role. Neighboring spots share cell type compositions, signaling gradients, and structural context that are biologically coupled to local expression patterns. 
+
+A standard linear probe on single-spot embeddings treats each spot in complete isolation, discarding this spatial signal entirely. Neighbor aggregation addresses this by enriching each spot's representation with context from its surrounding tissue before regression. Below is implementation of this technique.
 
 ```bash
 python implementations/neighbor_agg.py \
