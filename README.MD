@@ -120,7 +120,7 @@ Mean Pearson correlation across 9 HEST-Bench datasets (IDC, PRAD, PAAD, SKCM, CO
 | **DINOv3-B16 + Concat** | 0.4826 | 0.3529 | 0.3897 | 0.4877 | 0.2648 | 0.0905 | 0.2222 | 0.5049 | 0.2404 | **0.3373** |
 | **DINOv3-B16 + Mean** | 0.4476 | 0.2230 | 0.3420 | 0.4195 | 0.1491 | 0.0973 | 0.2528 | 0.4008 | 0.2410 | **0.2859** |
 
-> Evaluation of UNI_v2 successfully replicates the performance metrics reported in the original study.
+> **Validation:** **UNI_v2 performance** successfully replicates the results published in the original study.
 
 ---
 
