@@ -56,7 +56,7 @@ python implementations/benchmark.py \
   --results_dir /PATH/TO/RESULTS
 ```
 
-### ⚙️ Baseline Arguments
+### Baseline Arguments
 
 | Argument | Description |
 | :--- | :--- |
@@ -102,9 +102,9 @@ python implementations/neighbor_agg.py \
 
 | Argument | Description |
 | :--- | :--- |
-| `--spatial_agg` | Flag to enable spatial neighbor aggregation. |
-| `--spatial_k` | Number of nearest neighbor spots to aggregate. |
-| `--spatial_agg_mode` | Aggregation mode: `concat` (concatenate neighbor embeddings, then PCA) or `mean` (average all embeddings, preserves dimensionality). |
+| **`--spatial_agg`** | Flag to enable spatial neighbor aggregation. |
+| **`--spatial_k`** | Number of nearest neighbor spots to aggregate. |
+| **`--spatial_agg_mode`** | Aggregation mode: `concat` (concatenate neighbor embeddings, then PCA) or `mean` (average all embeddings, preserves dimensionality). |
 
 ---
 
