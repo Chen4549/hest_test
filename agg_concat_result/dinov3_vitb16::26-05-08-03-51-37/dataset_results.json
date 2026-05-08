@@ -1,0 +1,97 @@
+{
+    "average": {
+        "dinov3_vitb16": 0.3373
+    },
+    "results": [
+        {
+            "dataset_name": "IDC",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.4826,
+                    "pearson_std": 0.069
+                }
+            ]
+        },
+        {
+            "dataset_name": "PRAD",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.3528,
+                    "pearson_std": 0.0398
+                }
+            ]
+        },
+        {
+            "dataset_name": "PAAD",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.3897,
+                    "pearson_std": 0.0695
+                }
+            ]
+        },
+        {
+            "dataset_name": "SKCM",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.4877,
+                    "pearson_std": 0.0666
+                }
+            ]
+        },
+        {
+            "dataset_name": "COAD",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.2648,
+                    "pearson_std": 0.0073
+                }
+            ]
+        },
+        {
+            "dataset_name": "READ",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.0905,
+                    "pearson_std": 0.0847
+                }
+            ]
+        },
+        {
+            "dataset_name": "CCRCC",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.2222,
+                    "pearson_std": 0.0359
+                }
+            ]
+        },
+        {
+            "dataset_name": "LUNG",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.5049,
+                    "pearson_std": 0.0035
+                }
+            ]
+        },
+        {
+            "dataset_name": "LYMPH_IDC",
+            "results": [
+                {
+                    "encoder_name": "dinov3_vitb16",
+                    "pearson_mean": 0.2404,
+                    "pearson_std": 0.0466
+                }
+            ]
+        }
+    ]
+}

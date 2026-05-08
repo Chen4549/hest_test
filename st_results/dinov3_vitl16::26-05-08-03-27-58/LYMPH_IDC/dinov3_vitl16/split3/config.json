@@ -1,0 +1,32 @@
+{
+    "alpha": null,
+    "batch_size": 128,
+    "bench_data_root": "/gpfs/scratch/hc4549/HEST",
+    "benchmark_encoders": false,
+    "config": null,
+    "datasets": [
+        "IDC",
+        "PRAD",
+        "PAAD",
+        "SKCM",
+        "COAD",
+        "READ",
+        "CCRCC",
+        "LUNG",
+        "LYMPH_IDC"
+    ],
+    "dimreduce": "PCA",
+    "embed_dataroot": "./HEST/ST_data_emb",
+    "encoders": [],
+    "exp_code": "dinov3_vitl16",
+    "gene_list": "var_50genes.json",
+    "kfold": false,
+    "latent_dim": 256,
+    "method": "ridge",
+    "model_name": "dinov3_vitl16",
+    "normalize": true,
+    "num_workers": 1,
+    "overwrite": true,
+    "results_dir": "./HEST/ST_pred_results",
+    "seed": 1
+}

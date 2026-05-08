@@ -1,0 +1,316 @@
+{
+    "l2_error_q1": 1.6026,
+    "l2_error_q2": 3.805,
+    "l2_error_q3": 8.9718,
+    "l2_errors": [
+        8.4218,
+        2.6259,
+        1.5505,
+        26.8278,
+        8.761,
+        14.7338,
+        0.9084,
+        4.3862,
+        5.7704,
+        0.1952,
+        26.1635,
+        2.5968,
+        12.4053,
+        15.2961,
+        12.8983,
+        14.9288,
+        27.2179,
+        2.5016,
+        2.7121,
+        3.1368,
+        4.2645,
+        2.1863,
+        1.5115,
+        0.953,
+        1.4362,
+        0.2915,
+        2.5268,
+        1.5537,
+        26.2362,
+        3.1332,
+        8.5856,
+        0.3946,
+        1.5434,
+        0.8832,
+        2.9345,
+        3.9498,
+        8.4327,
+        9.8075,
+        0.8865,
+        3.6601,
+        26.5496,
+        4.2917,
+        2.2958,
+        18.2315,
+        0.2702,
+        5.3907,
+        4.8818,
+        1.7491,
+        9.0421,
+        6.3306
+    ],
+    "pearson_corrs": [
+        {
+            "name": "ABCC11",
+            "pearson_corr": 0.825
+        },
+        {
+            "name": "ADH1B",
+            "pearson_corr": 0.383
+        },
+        {
+            "name": "ADIPOQ",
+            "pearson_corr": 0.5616
+        },
+        {
+            "name": "ANKRD30A",
+            "pearson_corr": 0.5796
+        },
+        {
+            "name": "AQP1",
+            "pearson_corr": 0.4984
+        },
+        {
+            "name": "AQP3",
+            "pearson_corr": 0.4382
+        },
+        {
+            "name": "CCR7",
+            "pearson_corr": 0.5899
+        },
+        {
+            "name": "CD3E",
+            "pearson_corr": 0.6686
+        },
+        {
+            "name": "CEACAM6",
+            "pearson_corr": 0.6545
+        },
+        {
+            "name": "CEACAM8",
+            "pearson_corr": 0.2008
+        },
+        {
+            "name": "CLIC6",
+            "pearson_corr": 0.7258
+        },
+        {
+            "name": "CYTIP",
+            "pearson_corr": 0.6365
+        },
+        {
+            "name": "DST",
+            "pearson_corr": 0.613
+        },
+        {
+            "name": "ERBB2",
+            "pearson_corr": 0.8484
+        },
+        {
+            "name": "ESR1",
+            "pearson_corr": 0.8017
+        },
+        {
+            "name": "FASN",
+            "pearson_corr": 0.8197
+        },
+        {
+            "name": "GATA3",
+            "pearson_corr": 0.824
+        },
+        {
+            "name": "IL2RG",
+            "pearson_corr": 0.7066
+        },
+        {
+            "name": "IL7R",
+            "pearson_corr": 0.6504
+        },
+        {
+            "name": "KIT",
+            "pearson_corr": 0.3204
+        },
+        {
+            "name": "KLF5",
+            "pearson_corr": 0.7778
+        },
+        {
+            "name": "KRT14",
+            "pearson_corr": 0.4292
+        },
+        {
+            "name": "KRT5",
+            "pearson_corr": 0.4606
+        },
+        {
+            "name": "KRT6B",
+            "pearson_corr": 0.4398
+        },
+        {
+            "name": "MMP1",
+            "pearson_corr": 0.1942
+        },
+        {
+            "name": "MMP12",
+            "pearson_corr": 0.156
+        },
+        {
+            "name": "MS4A1",
+            "pearson_corr": 0.595
+        },
+        {
+            "name": "MUC6",
+            "pearson_corr": -0.0165
+        },
+        {
+            "name": "MYBPC1",
+            "pearson_corr": 0.5561
+        },
+        {
+            "name": "MYH11",
+            "pearson_corr": 0.4569
+        },
+        {
+            "name": "MYLK",
+            "pearson_corr": 0.5388
+        },
+        {
+            "name": "OPRPN",
+            "pearson_corr": 0.1838
+        },
+        {
+            "name": "OXTR",
+            "pearson_corr": 0.5044
+        },
+        {
+            "name": "PIGR",
+            "pearson_corr": 0.429
+        },
+        {
+            "name": "PTGDS",
+            "pearson_corr": 0.416
+        },
+        {
+            "name": "PTN",
+            "pearson_corr": 0.4062
+        },
+        {
+            "name": "PTPRC",
+            "pearson_corr": 0.7763
+        },
+        {
+            "name": "SCD",
+            "pearson_corr": 0.7131
+        },
+        {
+            "name": "SCGB2A1",
+            "pearson_corr": 0.2734
+        },
+        {
+            "name": "SERHL2",
+            "pearson_corr": 0.6477
+        },
+        {
+            "name": "SERPINA3",
+            "pearson_corr": 0.6676
+        },
+        {
+            "name": "SFRP1",
+            "pearson_corr": 0.4013
+        },
+        {
+            "name": "SLAMF7",
+            "pearson_corr": 0.5615
+        },
+        {
+            "name": "TACSTD2",
+            "pearson_corr": 0.8247
+        },
+        {
+            "name": "TCL1A",
+            "pearson_corr": 0.3446
+        },
+        {
+            "name": "TENT5C",
+            "pearson_corr": 0.5266
+        },
+        {
+            "name": "TOP2A",
+            "pearson_corr": 0.6742
+        },
+        {
+            "name": "TPSAB1",
+            "pearson_corr": 0.156
+        },
+        {
+            "name": "TRAC",
+            "pearson_corr": 0.5484
+        },
+        {
+            "name": "VWF",
+            "pearson_corr": 0.4253
+        }
+    ],
+    "pearson_mean": 0.5283,
+    "pearson_std": 0.2034,
+    "r2_score_q1": -5.4982,
+    "r2_score_q2": -1.5075,
+    "r2_score_q3": -0.5779,
+    "r2_scores": [
+        -1.9125,
+        -0.7829,
+        -0.4151,
+        -9.9491,
+        -5.0234,
+        -5.8106,
+        -0.2943,
+        -1.5076,
+        -2.18,
+        -0.2435,
+        -10.4649,
+        -1.8412,
+        -16.6535,
+        -8.4184,
+        -5.4617,
+        -5.5103,
+        -12.2492,
+        -0.751,
+        -0.7235,
+        -1.5074,
+        -3.6044,
+        -0.0531,
+        0.0809,
+        0.0301,
+        -1.1101,
+        -0.2179,
+        -0.5064,
+        -0.4103,
+        -7.4313,
+        -0.979,
+        -5.4205,
+        -0.3035,
+        -0.8069,
+        -0.266,
+        -1.3474,
+        -1.4008,
+        -5.7036,
+        -6.0512,
+        -0.5294,
+        -1.6812,
+        -8.5304,
+        -1.0867,
+        -1.104,
+        -9.0529,
+        -0.0945,
+        -5.3904,
+        -2.6538,
+        -1.0985,
+        -8.2927,
+        -3.6052
+    ]
+}

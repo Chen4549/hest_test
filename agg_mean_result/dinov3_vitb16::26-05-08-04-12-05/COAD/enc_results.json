@@ -1,0 +1,9 @@
+{
+    "results": [
+        {
+            "encoder_name": "dinov3_vitb16",
+            "pearson_mean": 0.1491,
+            "pearson_std": 0.0764
+        }
+    ]
+}
