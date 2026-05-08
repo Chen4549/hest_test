@@ -25,16 +25,18 @@ conda create -n hest python=3.11
 conda activate hest
 pip install -e .
 pip install -e ".[benchmark]"
+```
 
 If a GPU is available, install GPU-accelerated libraries for faster inference:                                                      
-  
+
+```bash
 pip install \
     --extra-index-url=https://pypi.nvidia.com \
     cudf-cu12==24.6.* dask-cudf-cu12==24.6.* cucim-cu12==24.6.* \
     raft-dask-cu12==24.6.*                                                                                                    
 ```
 
-DINOv3 weights must be downloaded separately and placed at a local path before running.                                             
+***DINOv3 weights*** must be downloaded separately and placed at a local path before running.                                             
                                                             
 Script Launching                                                                                                                    
                                                             
