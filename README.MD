@@ -135,4 +135,4 @@ Mean Pearson correlation across 9 HEST-Bench datasets (IDC, PRAD, PAAD, SKCM, CO
 
 * **Simple Predictive Head:** A basic regression head may underfit complex biological relationships. Upgrading to non-linear predictive heads (like MLPs or attention-based decoders) could significantly boost accuracy.
 
-* **Basic Spatial Aggregation:** Relying purely on physical distance to aggregate neighbors can blur distinct boundaries (e.g., tumor margins). Future models should use adaptive GNNs or spatial transformers to intelligently weight neighborhood context.
+* **Basic Spatial Aggregation:** Relying purely on physical distance to aggregate neighbors can blur distinct boundaries (e.g., tumor margins). Future models should use more advanced methods to intelligently weight neighborhood context.
