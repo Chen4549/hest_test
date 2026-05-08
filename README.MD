@@ -21,12 +21,11 @@
    whether the model correctly ranks spots by expression level, regardless of absolute scale. This makes it robust to normalization   
   differences across slides and datasets.                   
 
-  **K-fold validation:** Each dataset is evaluated using 2-fold cross-validation (two train/test splits). Results are reported as the 
+  **K-fold validation:** Each dataset is evaluated using K-fold cross-validation (depending on the case). Results are reported as the 
   mean and standard deviation of the per-fold Pearson correlations. This accounts for variability introduced by the choice of
   train/test split and gives a more reliable estimate of generalization performance.                                                  
                                                             
-  **Dimensionality reduction:** By default, PCA is applied to reduce embeddings to 256 dimensions before ridge regression. This       
-  reduces noise and makes the regression problem more tractable given the limited number of training spots (~2,000–3,500) per dataset.
+  **Dimensionality reduction:** By default, PCA is applied to reduce embeddings to 256 dimensions before ridge regression. This ensure fair comparison between models.
                                                                                                                                       
   ## Environment Setup                                      
 
