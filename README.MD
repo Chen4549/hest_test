@@ -1,6 +1,6 @@
 # Spatial Transcriptomics Prediction from H&E Images
 
-This repository implements spatial transcriptomics gene expression prediction from H&E whole slide images (WSIs). Built on top of the [HEST-Bench](https://github.com/mahmoodlab/HEST) framework, it leverages various foundation models and spatial neighbor aggregation techniques to accurately map tissue morphology to gene expression.
+This repository implements spatial transcriptomics gene expression prediction from H&E images. Built on top of the [HEST-Bench](https://github.com/mahmoodlab/HEST) framework, it leverages various foundation models and spatial neighbor aggregation techniques to accurately map tissue morphology to gene expression.
 
 ## Task Overview
 
