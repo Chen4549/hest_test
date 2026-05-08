@@ -51,6 +51,8 @@ parser.add_argument('--exp_code', type=str)
 parser.add_argument('--model_name', type=str, default='dinov3_vitl16', 
                     choices=['uni_v2', 'dinov3_vitl16', 'dinov3_vitb16'],
                     help='Which foundation model to use')
+parser.add_argument('--weights', type=str, default='', 
+                    help='Path to foundation models path if DINO')
 parser.add_argument('--batch_size', type=int, help='Batch size')
 parser.add_argument('--num_workers', type=int, help='Number of workers for dataloader')
 
@@ -552,17 +554,17 @@ if __name__ == '__main__':
     else:
         # Custom DINO route: load and wrap as befor
 
-        if cli_args.model_name == 'dinov3_vitb16':
-            weights = '/gpfs/scratch/hc4549/HEST/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth'
-        elif cli_args.model_name == 'dinov3_vitl16':
-            weights = '/gpfs/scratch/hc4549/HEST/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
-        else:
-            print(f"MODEL: {cli_args.model_name} NOT FOUND.")
+        # if cli_args.model_name == 'dinov3_vitb16':
+        #     weights = '/gpfs/scratch/hc4549/HEST/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth'
+        # elif cli_args.model_name == 'dinov3_vitl16':
+        #     weights = '/gpfs/scratch/hc4549/HEST/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth'
+        # else:
+        #     print(f"MODEL: {cli_args.model_name} NOT FOUND.")
 
         raw_model = torch.hub.load(
             'facebookresearch/dinov3', 
             cli_args.model_name, 
-            weights=weights
+            weights=cli_args.weights
         )
 
         wrapped_model = DINOv3Wrapper(raw_model)
