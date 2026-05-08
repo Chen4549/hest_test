@@ -122,6 +122,12 @@ Mean Pearson correlation across 9 HEST-Bench datasets (IDC, PRAD, PAAD, SKCM, CO
 
 > **Validation:** **UNI_v2 performance** successfully replicates the results published in the original study.
 
+Detailed performance metrics and logs can be found in the following links:
+
+* [Foundation Model](st_results)
+* [Neighbor Concat](agg_concat_result)
+* [Neighbor Mean](agg_mean_result)
+
 ---
 
 ## Summary & Findings
