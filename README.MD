@@ -80,7 +80,11 @@ python implementations/benchmark.py \
 
 Gene expression at a spatial spot is not determined solely by the cells directly beneath it — the surrounding tissue microenvironment plays a significant role. Neighboring spots share cell type compositions, signaling gradients, and structural context that are biologically coupled to local expression patterns. 
 
-A standard linear probe on single-spot embeddings treats each spot in complete isolation, discarding this spatial signal entirely. Neighbor aggregation addresses this by enriching each spot's representation with context from its surrounding tissue before regression. Below is implementation of this technique.
+A standard linear probe on single-spot embeddings treats each spot in complete isolation, discarding this spatial signal entirely. Neighbor aggregation addresses this by enriching each spot's representation with context from its surrounding tissue before regression. 
+
+Thus, in this repo, I implemented this technique in two ways: Mean vs Concat.
+
+Below is the command to launch the script.
 
 ```bash
 python implementations/neighbor_agg.py \
@@ -94,12 +98,12 @@ python implementations/neighbor_agg.py \
   --results_dir /PATH/TO/RESULTS
 ```
 
-**Additional Aggregation Arguments:**
+**Aggregation Arguments:**
 
 | Argument | Description |
 | :--- | :--- |
 | `--spatial_agg` | Flag to enable spatial neighbor aggregation. |
-| `--spatial_k` | Number of nearest neighbor spots to aggregate (e.g., `8` = 3×3 window minus center, `24` = 5×5 window minus center). |
+| `--spatial_k` | Number of nearest neighbor spots to aggregate. |
 | `--spatial_agg_mode` | Aggregation mode: `concat` (concatenate neighbor embeddings, then PCA) or `mean` (average all embeddings, preserves dimensionality). |
 
 ---
@@ -127,7 +131,8 @@ Mean Pearson correlation across 9 HEST-Bench datasets (IDC, PRAD, PAAD, SKCM, CO
 
 ## Limitations
 
-* **Inconsistent Aggregation Benefits:** Spatial aggregation via concatenation does not universally improve performance. The dataset-dependent benefits imply that simple k=8 pixel-space nearest neighbors might fail to capture true biological context across all cancer types. While a learnable aggregation head (e.g., a small transformer) could intelligently weight neighbor contributions, it would require substantially more training data to stave off overfitting.
-* **Failure of Mean Aggregation:** Averaging neighboring embeddings collapses the distinct identity of a spot into its broader microenvironment. This effectively destroys the localized discriminative signals that the ridge regression model requires to function.
-* **The Domain Gap:** The gap between general-purpose and pathology-specific encoders remains large. Despite being powerful large-scale vision transformers, DINOv3 models trail UNI v2 by roughly ~8 points on average. Spatial aggregation cannot close this gap, proving that domain-specific pretraining is the primary driver of success in spatial transcriptomics.
-* **Data Constraints:** Each dataset in HEST-Bench contains roughly 3,000–5,000 spatial spots per WSI. This limits the capacity of the regression probe. Attempting to use more expressive spatial aggregation strategies (like Graph Neural Networks or cross-attention) in this low-data regime will likely lead to severe overfitting without stronger regularization or vastly larger WSI cohorts.
+* **Domain Gap:** While powerful, DINOv3 lacks pathology-specific pre-training. Future work will fine-tune the visual backbone on large pathology datasets to capture domain-specific morphology.
+
+* **Simple Predictive Head:** A basic regression head may underfit complex biological relationships. Upgrading to non-linear predictive heads (like MLPs or attention-based decoders) could significantly boost accuracy.
+
+* **Basic Spatial Aggregation:** Relying purely on physical distance to aggregate neighbors can blur distinct boundaries (e.g., tumor margins). Future models should use adaptive GNNs or spatial transformers to intelligently weight neighborhood context.
